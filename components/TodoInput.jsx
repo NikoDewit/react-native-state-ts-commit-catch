@@ -23,7 +23,13 @@ export function TodoInput({ onAddTodo }) {
     <View style={styles.inputSection}>
       <Text style={styles.inputSectionTitle}>Add a Todo</Text>
       {/* TODO: implement onChangeText, value, placeholder, placeholderTextColor, and style */}
-      <TextInput />
+      <TextInput
+        onChangeText={inputHandler}
+        value={enteredTodo}
+        placeholder="Enter a todo"
+        placeholderTextColor={styles.overlay}
+        style={styles.textInput}
+      />
       <Text style={styles.inputHint}>
         Type a task above, then tap Add Todo.
       </Text>
