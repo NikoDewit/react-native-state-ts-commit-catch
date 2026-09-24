@@ -13,6 +13,8 @@ export function TodoInput({ onAddTodo }) {
   };
 
   const addTodoHandler = () => {
+    onAddTodo(enteredTodo);
+    setEnteredTodo("");
     // TODO (logic): call onAddTodo(enteredTodo) to send the new todo up
     // to TodoSection
     // TODO (state): clear the input field afterwards (reset enteredTodo
