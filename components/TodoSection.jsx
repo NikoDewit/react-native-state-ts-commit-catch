@@ -5,7 +5,6 @@ import { TodoList } from "./TodoList";
 import { generateId } from "../utils/generateId";
 
 export function TodoSection() {
-  // TODO (state): Declare todos as state
   const [todos, setTodos] = useState([
     { id: "1", title: "Learn useState" },
     {
@@ -20,7 +19,7 @@ export function TodoSection() {
   };
 
   const deleteTodoItem = (id) => {
-   setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
   return (
