@@ -14,16 +14,9 @@ export function TodoInput({ onAddTodo }) {
   const addTodoHandler = () => {
     onAddTodo(enteredTodo);
     setEnteredTodo("");
-    // TODO (logic): call onAddTodo(enteredTodo) to send the new todo up
-    // to TodoSection
-    onAddTodo(enteredTodo);
-    // TODO (state): clear the input field afterwards (reset enteredTodo
-    // back to "")
-    setEnteredTodo("");
   };
 
   const cancelHandler = () => {
-    // TODO (state): clear the input field without adding a todo
     setEnteredTodo("");
   };
 
@@ -31,7 +24,13 @@ export function TodoInput({ onAddTodo }) {
     <View style={styles.inputSection}>
       <Text style={styles.inputSectionTitle}>Add a Todo</Text>
       {/* TODO: implement onChangeText, value, placeholder, placeholderTextColor, and style */}
-      <TextInput />
+      <TextInput
+        onChangeText={inputHandler}
+        value={enteredTodo}
+        placeholder="Enter a todo"
+        placeholderTextColor={styles.overlay}
+        style={styles.textInput}
+      />
       <Text style={styles.inputHint}>
         Type a task above, then tap Add Todo.
       </Text>
