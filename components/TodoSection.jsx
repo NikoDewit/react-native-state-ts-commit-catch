@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { StyleSheet, View } from "react-native";
 import { TodoInput } from "./TodoInput";
 import { TodoList } from "./TodoList";
@@ -5,13 +6,13 @@ import { generateId } from "../utils/generateId";
 
 export function TodoSection() {
   // TODO (state): Declare todos as state
-  const todos = [
-    { id: "1", text: "Learn useState" },
+  const [todos, setTodos] = useState([
+    { id: "1", title: "Learn useState" },
     {
       id: "2",
-      text: "Practice typescript refactoring",
+      title: "Practice typescript refactoring",
     },
-  ];
+  ]);
 
   const addTodoItem = (title) => {
     const newTodo = { id: generateId(), title };
