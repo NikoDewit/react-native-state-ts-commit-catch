@@ -36,7 +36,7 @@ export function TodoInput({ onAddTodo }) {
         
         <AppButton text="Add Todo" onPress={addTodoHandler} />
         {/* TODO: wire onPress to cancelHandler */}
-        <AppButton text="Cancel" />
+        <AppButton text="Cancel" onPress={cancelHandler} />
       </View>
     </View>
   );
