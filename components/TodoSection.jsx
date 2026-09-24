@@ -21,7 +21,7 @@ export function TodoSection() {
   };
 
   const deleteTodoItem = (id) => {
-    // Delete item state logic
+   setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
   return (
