@@ -16,7 +16,6 @@ export function TodoSection() {
 
   const addTodoItem = (title) => {
     const newTodo = { id: generateId(), title };
-    // add item to the existing array
     setTodos((prev) => [...prev, newTodo]);
   };
 
