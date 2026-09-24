@@ -8,7 +8,9 @@ export function TodoInput({ onAddTodo }) {
   const [enteredTodo, setEnteredTodo] = useState("placeholder Text");
 
   // TODO (state): update enteredTodo with the text the user typed.
-  const inputHandler = (text) => {};
+  const inputHandler = (text) => {
+    setEnteredTodo(text);
+  };
 
   const addTodoHandler = () => {
     // TODO (logic): call onAddTodo(enteredTodo) to send the new todo up
