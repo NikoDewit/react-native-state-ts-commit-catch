@@ -33,9 +33,8 @@ export function TodoInput({ onAddTodo }) {
         Type a task above, then tap Add Todo.
       </Text>
       <View style={styles.buttonContainer}>
-        
         <AppButton text="Add Todo" onPress={addTodoHandler} />
-        {/* TODO: wire onPress to cancelHandler */}
+
         <AppButton text="Cancel" onPress={cancelHandler} />
       </View>
     </View>
