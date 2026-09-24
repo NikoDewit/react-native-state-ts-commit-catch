@@ -16,12 +16,15 @@ export function TodoInput({ onAddTodo }) {
     setEnteredTodo("");
     // TODO (logic): call onAddTodo(enteredTodo) to send the new todo up
     // to TodoSection
+    onAddTodo(enteredTodo);
     // TODO (state): clear the input field afterwards (reset enteredTodo
     // back to "")
+    setEnteredTodo("");
   };
 
   const cancelHandler = () => {
     // TODO (state): clear the input field without adding a todo
+    setEnteredTodo("");
   };
 
   return (
