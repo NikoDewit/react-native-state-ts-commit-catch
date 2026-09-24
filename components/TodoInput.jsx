@@ -4,7 +4,6 @@ import { AppButton } from "./AppButton";
 import { colors } from "../assets/theme";
 
 export function TodoInput({ onAddTodo }) {
-  // TODO (state): replace this with a useState hook so the TextInput is
   const [enteredTodo, setEnteredTodo] = useState("placeholder Text");
 
   // TODO (state): update enteredTodo with the text the user typed.
