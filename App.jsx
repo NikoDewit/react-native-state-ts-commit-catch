@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet, ScrollView } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { PageHeader } from "./components/PageHeader";
 import { PageFooter } from "./components/PageFooter";
 import { TodoSection } from "./components/TodoSection";
@@ -8,14 +8,16 @@ import { colors } from "./assets/theme";
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <View style={styles.scrollContent}>
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.safeArea}>
         <PageHeader />
-        <TodoSection />
+        <StatusBar style="light" />
+        <ScrollView style={styles.scrollContent}>
+          <TodoSection />
+        </ScrollView>
         <PageFooter />
-        <StatusBar style="auto" />
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
